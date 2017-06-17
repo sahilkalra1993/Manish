@@ -15,23 +15,34 @@
 
 <style>
             body {
-                background: #aaa;
+                background: #b8c6d0;
                
             }
             
             #myCanvas {
     			padding: 0;
     			margin: auto;
+    			margin-top: 2cm;
+    			margin-bottom: 2cm;
    				display: block;
-    			width: 1000px;
-    			height: 650px;
-    			position: absolute;
+    			width: 1250px;
+    			height: 2000px;
    				top: 0;
     			bottom: 0;
     			left: 0;
     			right: 0;
-    			background:#bbb;
+    			background:#aaaaaa;
 			}
+			
+			.wrapper {
+    			text-align: center;
+    			margin-top: 1cm;
+			}
+
+			.button {
+    			position: absolute;
+    			
+    		}
         
 </style>
 
@@ -123,14 +134,18 @@
 
     </div>
 </nav>
-<a href=" {% url 'home:wish' %} "> Wish text</a>
-<a href=" {% url 'home:image' %} "> Wish Image</a>
-<a href=" {% url 'home:image_url' %} "> Wish Image Url</a>
+
+<div class="wrapper">
+<a href=" {% url 'home:wish' %} "><button type="button" class="btn btn-primary">Wish text</button></a>
+<a href=" {% url 'home:image' %} "><button type="button" class="btn btn-primary">Wish Image</button></a>
+<a href=" {% url 'home:image_url' %} "><button type="button" class="btn btn-primary">Wish Image Url</button></a>
+</div>
+
 
 <div class="col-sm-10" style="visibility: Hidden">
 {% for images in all_image %}
 	
-    		<img id="img{{ forloop.counter }}" src="{{images.wish_image.url}}"/>
+    		<img id="img{{ forloop.counter }}" src="{{images.wish_image.url}}" height="20"/>
 
 {% endfor %}
 
@@ -143,8 +158,8 @@
 
 </div>
 
-<canvas id="myCanvas" width="1250" height="800"
-style="border:1px solid #d3d3d3; float:center;">
+<canvas id="myCanvas" width="1250" height="2000"
+style="border:3px solid #d3d3d3;">
 </canvas>
 
 
@@ -154,7 +169,7 @@ style="border:1px solid #d3d3d3; float:center;">
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-ctx.font = "italic 20px Courier New";
+ctx.font = "italic bold 20pt Arial";
 var x_axis = 0
 var y_axis = 0
 var i = 1
