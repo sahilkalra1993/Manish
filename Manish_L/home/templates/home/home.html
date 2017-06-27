@@ -1,0 +1,95 @@
+{% extends 'home/main_template.html' %}
+
+{% block body %}
+
+<div class="wrapper">
+<a href=" {% url 'home:create_wish' %} "><button type="button" class="btn btn-primary">Wish text</button></a>
+<a href=" {% url 'home:create_image' %} "><button type="button" class="btn btn-primary">Wish Image</button></a>
+<a href=" {% url 'home:create_image_url' %} "><button type="button" class="btn btn-primary">Wish Image Url</button></a>
+</div>
+
+
+<div class="col-sm-10" style="visibility: Hidden">
+{% for images in all_image %}
+	
+    		<img id="img{{ forloop.counter }}" src="{{images.wish_image.url}}" height="20"/>
+
+{% endfor %}
+
+{% for images_url in all_image_url %}
+	
+    		<img id="imga{{ forloop.counter }}" src="{{images_url.image_url}}" height="20"/>
+
+{% endfor %}
+
+
+</div>
+
+<canvas id="myCanvas" width="1250" height="2000"
+style="border:3px solid #d3d3d3;">
+</canvas>
+
+
+
+</script>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.lineWidth = 5;
+ctx.font = "italic bold 20pt Arial";
+var x_axis = 0
+var y_axis = 0
+var i = 1
+
+{% for wishes in all_wish %}
+ 
+ctx.save();
+
+x_axis=x_axis+70
+ctx.translate(40,100);
+ctx.rotate(-Math.PI*2/(i));
+ctx.fillText("{{wishes.wish_text}}",x_axis,y_axis);
+x_axis=-(x_axis)
+y_axis= y_axis+70
+  	
+ctx.restore();
+
+{% endfor %}
+
+
+</script>
+
+<script>
+window.onload = function() {
+	
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.lineWidth = 5;
+    var x_axis= 865
+    var y_axis=50
+    var temp=115
+    {% for images in all_image %}
+		var img = document.getElementById("img{{ forloop.counter }}"); 
+		ctx.drawImage(img, x_axis+temp ,y_axis, 170, 180);
+		temp=-temp
+		y_axis=y_axis+115
+  
+    {% endfor %}
+    
+    
+    var x_axis= 565
+    var y_axis=50
+    var temp=115
+    {% for images_url in all_image_url %}
+		var img = document.getElementById("imga{{ forloop.counter }}"); 
+		ctx.drawImage(img, x_axis ,y_axis, 170, 180);
+		temp=-temp
+		y_axis=y_axis+300
+  
+    {% endfor %}
+};
+</script>
+
+{% endblock %}
+
