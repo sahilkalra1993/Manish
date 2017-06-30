@@ -3,9 +3,9 @@
 {% block body %}
 
 <div class="wrapper">
-<a href=" {% url 'home:create_wish' %} "><button type="button" class="btn btn-primary">Wish text</button></a>
-<a href=" {% url 'home:create_image' %} "><button type="button" class="btn btn-primary">Wish Image</button></a>
-<a href=" {% url 'home:create_image_url' %} "><button type="button" class="btn btn-primary">Wish Image Url</button></a>
+<a href=" {% url 'home:create_wish' %} "><button type="button" class="btn">Wish text</button></a>
+<a href=" {% url 'home:create_image' %} "><button type="button" class="btn">Wish Image</button></a>
+<a href=" {% url 'home:create_image_url' %} "><button type="button" class="btn">Wish Image Url</button></a>
 </div>
 
 
@@ -34,10 +34,11 @@ style="border:3px solid #FFFFFF;">
 </script>
 
 <script>
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.lineWidth = 5;
-ctx.font = "italic bold 20pt Arial";
+ctx.font = "500 16pt Courier New";
 var x_axis = 0
 var y_axis = 0
 var i = 1
