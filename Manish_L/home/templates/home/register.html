@@ -1,13 +1,16 @@
 {% extends 'home/visitor_template.html' %}
 
 {% block body %}
-
+<div class="outer">
+<div class="middle">
+<div class="inner">
 
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <div class="panel panel-default " style="background: #b8c6d0;">
+         <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div class="panel panel-default " id="register" style="background: #FFFFFF;">
                 <div class="panel-body">
                     <h3>Register for an Account</h3>
                     {% if error_message %}
@@ -31,4 +34,11 @@
     </div>
 
 </div>
+
+</div>
+
+
+ </div>
+ </div>
+ </div>
 {% endblock %}

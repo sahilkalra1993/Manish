@@ -10,49 +10,8 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap&callback=initMap"></script>
-
-
-
 <style>
-            body {
-                background: #FFFFFF;
-               
-            }
-            
-            #myCanvas {
-    			padding: 0;
-    			margin: auto;
-    			margin-top: 2cm;
-    			margin-bottom: 2cm;
-   				display: block;
-    			width: 1250px;
-    			height: 2000px;
-   				top: 0;
-    			bottom: 0;
-    			left: 0;
-    			right: 0;
-    			background:#FFFFFF;
-			}
-		
-			.wrapper {
-    			text-align: center;
-    			margin-top: 1cm;
-			}
-
-			.button {
-    			position: absolute;
-    			
-    		}
-    		
-    		.navbar {
-    			border-radius: 0;
-    		}
-    		
-    		.navbar-brand {
-   				font-family: 'Pacifico', cursive;
-   			}
-   			
-   			 .outer {
+            .outer {
     display: table;
     position: absolute;
     height: 100%;
@@ -68,13 +27,48 @@
     margin-left: auto;
     margin-right: auto; 
     width: 100%
-}	
+}
 </style>
-
 </head>
-<body>
 
-{% block body %}
-{% endblock %}
+
+<body>
+<div class="outer">
+  <div class="middle">
+  <div class="inner">
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail" style="border: none !important;">
+        <img src="/media/iwishehere_logo.jpg" alt="Lights" class="img-responsive center-block">
+    </div>
+  </div>
+ </div>
+ 
+ <div class="row">
+ <div class="col-md-4"></div>
+  <div class="col-md-2">
+    <div class="thumbnail" style="border: none !important;">
+      <a href="{% url 'home:login_user' %}">
+        <img src="/media/login.jpg" alt="Lights" class="img-responsive center-block">
+      </a>
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="thumbnail" style="border: none !important;">
+      <a href="{% url 'home:register' %}">
+        <img src="/media/register.jpg" alt="Lights" class="img-responsive center-block">
+      </a>
+    </div>
+   <div class="col-md-4"></div>
+  </div>
+  
+ </div>
+ 
+ </div>
+ </div>
+ </div>
+
 </body>
 </html>

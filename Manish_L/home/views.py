@@ -12,6 +12,12 @@ from .forms import UserForm,WishForm,ImageForm,ImageUrlForm
 
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
+
+def welcome(request):
+    
+    return render(request, 'home/welcome.html')
+
+
 def create_wish(request):
     if not request.user.is_authenticated():
         return render(request, 'home/login.html')
@@ -89,7 +95,7 @@ def create_image_url(request):
 def home(request):
     
     if not request.user.is_authenticated():
-        return render(request, 'home/login.html')
+        return render(request, 'home/welcome.html')
     else:
         user = request.user
         all_wish = Wish.objects.filter(user=request.user)
