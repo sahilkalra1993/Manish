@@ -7,32 +7,65 @@
 
 <div class="container-fluid">
 
+
+	<div class="row">
+  			<div class="col-md-12">
+  				<div class="col-md-3"></div>
+  				<div class="col-md-6">
+    			<div class="thumbnail" style="border: none !important;">
+       				<img src="/media/iwishehere_logo.jpg" alt="Lights" class="img-responsive center-block" style="width:80%">
+    			</div>
+    			</div>
+    			<div class="col-md-3"></div>
+  			</div>
+ 	</div>
+
     <div class="row">
-         <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <div class="panel panel-default " id="register" style="background: #FFFFFF;">
-                <div class="panel-body">
-                    <h3>Register for an Account</h3>
-                    {% if error_message %}
-                        <p><strong>{{ error_message }}</strong></p>
-                    {% endif %}
+    <div class="col-md-12">
+         <div class="col-md-4"></div>
+         	<div class="col-md-4">
+            	<div class="panel panel-default" style="background: #FFFFFF; border: none !important;">
+                	<div class="panel-body" >
+                    	{% if error_message %}
+                        	<p><strong>{{ error_message }}</strong></p>
+                    	{% endif %}
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% include 'home/form-template.html' %}
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Submit</button>
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <button type="submit" class="btn">Submit</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="panel-footer">
-                    Already have an account? <a href="{% url 'home:login_user' %}">Click here</a> to log in.
-                </div>
+                
             </div>
         </div>
     </div>
 
+
+<div class="row">
+ <div class="col-md-4"></div>
+  <div class="col-md-2">
+    <div class="thumbnail" style="border: none !important;">
+      <a href="{% url 'home:login_user' %}">
+        <img src="/media/login.jpg" alt="Lights" class="img-responsive center-block">
+      </a>
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="thumbnail" style="border: none !important;">
+      <a href="{% url 'home:register' %}">
+        <img src="/media/register.jpg" alt="Lights" class="img-responsive center-block">
+      </a>
+    </div>
+   <div class="col-md-4"></div>
+  </div>
+  
+ </div>
+</div>
 </div>
 
 </div>
