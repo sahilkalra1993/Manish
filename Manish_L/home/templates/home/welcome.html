@@ -6,12 +6,14 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico">
+<link href="https://fonts.googleapis.com/css?family=Cookie|Indie+Flower" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap&callback=initMap"></script>
 <style>
-            .outer {
+   	
+   	.outer {
     display: table;
     position: absolute;
     height: 100%;
@@ -28,6 +30,20 @@
     margin-right: auto; 
     width: 100%
 }
+
+body{
+	background: white url("/media/background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.col-md-2 a:hover{
+
+text-decoration: None;
+
+}
 </style>
 </head>
 
@@ -38,33 +54,29 @@
   <div class="inner">
 
 <div class="row">
-  			<div class="col-md-12">
-  				<div class="col-md-3"></div>
-  				<div class="col-md-6">
-    			<div class="thumbnail" style="border: none !important;">
-       				<img src="/media/iwishehere_logo.jpg" alt="Lights" class="img-responsive center-block" style="width:80%">
-    			</div>
-    			</div>
-    			<div class="col-md-3"></div>
-  			</div>
+  				<div class="col-md-2"></div>
+  				<div class="col-md-8">
+    			<h2 style="bold: true; background-color: transparent; color:white; font-size:650%; text-align:center;"">
+       				<span style="font-family: 'Cookie', cursive "; >&nbsp;&nbsp;<i><b>i</b></i></span>
+       				<span style="font-family: 'Indie Flower', cursive">&nbsp;Wish Here</span>
+       			</h2>
+       			</div>
+    			<div class="col-md-2"></div>
  	</div>
  
  <div class="row">
  <div class="col-md-4"></div>
   <div class="col-md-2">
-    <div class="thumbnail" style="border: none !important;">
       <a href="{% url 'home:login_user' %}">
-        <img src="/media/login.jpg" alt="Lights" class="img-responsive center-block">
+      	<h2 style="font-family: 'Cookie', cursive; background-color: transparent; color:white; font-size:300%; text-align:center;">Login</h2>
       </a>
-    </div>
   </div>
   
   <div class="col-md-2">
-    <div class="thumbnail" style="border: none !important;">
+  
       <a href="{% url 'home:register' %}">
-        <img src="/media/register.jpg" alt="Lights" class="img-responsive center-block">
+      	<h2 style="font-family: 'Cookie', cursive; background-color: transparent; color:white; font-size:300%; text-align:center;">Register</h2>
       </a>
-    </div>
    <div class="col-md-4"></div>
   </div>
   

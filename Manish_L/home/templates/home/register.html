@@ -9,22 +9,21 @@
 
 
 	<div class="row">
-  			<div class="col-md-12">
-  				<div class="col-md-3"></div>
-  				<div class="col-md-6">
-    			<div class="thumbnail" style="border: none !important;">
-       				<img src="/media/iwishehere_logo.jpg" alt="Lights" class="img-responsive center-block" style="width:80%">
-    			</div>
-    			</div>
-    			<div class="col-md-3"></div>
-  			</div>
+  				<div class="col-md-2"></div>
+  				<div class="col-md-8">
+    			<h2 style="bold: true; background-color: transparent; color:white; font-size:650%; text-align:center;=">
+       				<span style="font-family: 'Cookie', cursive "	>&nbsp;&nbsp;<i><b>i</b></i></span>
+       				<span style="font-family: 'Indie Flower', cursive">&nbsp;Wish Here</span>
+       			</h2>
+       			</div>
+    			<div class="col-md-2"></div>
  	</div>
 
     <div class="row">
     <div class="col-md-12">
          <div class="col-md-4"></div>
          	<div class="col-md-4">
-            	<div class="panel panel-default" style="background: #FFFFFF; border: none !important;">
+            	<div class="panel panel-default" style="background: transparent; border: none !important;">
                 	<div class="panel-body" >
                     	{% if error_message %}
                         	<p><strong>{{ error_message }}</strong></p>
@@ -33,8 +32,8 @@
                         {% csrf_token %}
                         {% include 'home/form-template.html' %}
                         <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
-                                <button type="submit" class="btn">Submit</button>
+                            <div class="col-md-12" style="text-align: center;">
+                                <button type="submit" class="btn">Register</button>
                             </div>
                         </div>
                     </form>
@@ -43,34 +42,17 @@
             </div>
         </div>
     </div>
-
-
-<div class="row">
- <div class="col-md-4"></div>
-  <div class="col-md-2">
-    <div class="thumbnail" style="border: none !important;">
-      <a href="{% url 'home:login_user' %}">
-        <img src="/media/login.jpg" alt="Lights" class="img-responsive center-block">
-      </a>
     </div>
-  </div>
+
   
-  <div class="col-md-2">
-    <div class="thumbnail" style="border: none !important;">
-      <a href="{% url 'home:register' %}">
-        <img src="/media/register.jpg" alt="Lights" class="img-responsive center-block">
+ <div class="col-md-12" style="text-align: center;">
+      <a href="{% url 'home:login_user' %}">
+      	<input type="button" value="Login" class="btn" style="color : black"></input>
       </a>
-    </div>
-   <div class="col-md-4"></div>
-  </div>
   
  </div>
-</div>
-</div>
 
-</div>
-
-
+ </div>
  </div>
  </div>
  </div>
