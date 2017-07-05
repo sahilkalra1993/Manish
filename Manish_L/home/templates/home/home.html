@@ -31,66 +31,44 @@ style="border:3px solid #FFFFFF;">
 
 
 
-</script>
-
 <script>
+window.onload = function() {
+var x_axis = (screen.width)/2;
+var y_axis = 0
 
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.lineWidth = 5;
-ctx.font = "500 16pt Courier New";
-var x_axis = 0
-var y_axis = 0
-var i = 1
+ctx.font = "700 14pt Courier New";
 
 {% for wishes in all_wish %}
  
 ctx.save();
 
-x_axis=x_axis+70
-ctx.translate(40,100);
-ctx.rotate(-Math.PI*2/(i));
 ctx.fillText("{{wishes.wish_text}}",x_axis,y_axis);
-x_axis=-(x_axis)
-y_axis= y_axis+70
-  	
-ctx.restore();
+y_axis= y_axis+35
+
 
 {% endfor %}
 
-
-</script>
-
-<script>
-window.onload = function() {
-	
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    ctx.lineWidth = 5;
-    var x_axis= 865
-    var y_axis=50
-    var temp=115
-    {% for images in all_image %}
+{% for images in all_image %}
 		var img = document.getElementById("img{{ forloop.counter }}"); 
-		ctx.drawImage(img, x_axis+temp ,y_axis, 170, 180);
-		temp=-temp
-		y_axis=y_axis+115
+		ctx.drawImage(img, x_axis ,y_axis, 170, 180);
+		y_axis=y_axis+300
   
-    {% endfor %}
-    
-    
-    var x_axis= 565
-    var y_axis=50
-    var temp=115
-    {% for images_url in all_image_url %}
+{% endfor %}
+
+{% for images_url in all_image_url %}
 		var img = document.getElementById("imga{{ forloop.counter }}"); 
 		ctx.drawImage(img, x_axis ,y_axis, 170, 180);
 		temp=-temp
 		y_axis=y_axis+300
   
-    {% endfor %}
+{% endfor %}
 };
 </script>
+
+
 
 {% endblock %}
 
