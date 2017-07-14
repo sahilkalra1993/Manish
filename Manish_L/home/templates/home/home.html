@@ -2,13 +2,6 @@
 
 {% block body %}
 
-<div class="wrapper">
-<a href=" {% url 'home:create_wish' %} "><button type="button" class="btn">Wish text</button></a>
-<a href=" {% url 'home:create_image' %} "><button type="button" class="btn">Wish Image</button></a>
-<a href=" {% url 'home:create_image_url' %} "><button type="button" class="btn">Wish Image Url</button></a>
-</div>
-
-
 <div class="col-sm-10" style="visibility: Hidden">
 {% for images in all_image %}
 	
@@ -25,50 +18,22 @@
 
 </div>
 
-<canvas id="myCanvas" width="1250" height="2000"
-style="border:3px solid #FFFFFF;">
-</canvas>
-
-
-
-<script>
-window.onload = function() {
-var x_axis = (screen.width)/2;
-var y_axis = 0
-
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.lineWidth = 5;
-ctx.font = "700 14pt Courier New";
 
 {% for wishes in all_wish %}
- 
-ctx.save();
 
-ctx.fillText("{{wishes.wish_text}}",x_axis,y_axis);
-y_axis= y_axis+35
-
+	<div class="col-md-12" style="text-align: center; color: yellow">
+		<h2><i><b>{{wishes}}</b></i></h2>
+		</div>
 
 {% endfor %}
 
 {% for images in all_image %}
-		var img = document.getElementById("img{{ forloop.counter }}"); 
-		ctx.drawImage(img, x_axis ,y_axis, 170, 180);
-		y_axis=y_axis+300
-  
+		
 {% endfor %}
 
 {% for images_url in all_image_url %}
-		var img = document.getElementById("imga{{ forloop.counter }}"); 
-		ctx.drawImage(img, x_axis ,y_axis, 170, 180);
-		temp=-temp
-		y_axis=y_axis+300
-  
+		
 {% endfor %}
-};
-</script>
-
-
 
 {% endblock %}
 

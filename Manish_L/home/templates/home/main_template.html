@@ -17,7 +17,7 @@
 
 <style>
             body {
-                background: #FFFFFF;
+                background: black;
                
             }
             
@@ -117,13 +117,14 @@
             
          
                 <li>
-                    <a href="#" style="color: white">
+                    <a href="{% url 'home:create_wish' %}" style="color: white">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color: white"></span>&nbsp; 
-					Add
+					Add Wish
                     </a>
                 </li>
                 <li>
                     <a href="#" style="color: white">
+                    <!--{% url 'home:create_image' %}, {% url 'home:create_image_url' %} -->
                         <span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: white"></span>&nbsp; 
 			Options
                     </a>
