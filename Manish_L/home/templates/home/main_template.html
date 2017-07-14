@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico">
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cookie|Indie+Flower" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -71,12 +71,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'home:home'%}" style="font-size: 120%"">i Wish Here</a>
+            <a class="navbar-brand" href="{% url 'home:home'%}" style="font-size: 120%"">
+       				<span style=" font-size:250%; font-family: 'Cookie', cursive; color: yellow " ><i><b>i</b></i></span>
+       				<span style="font-size:150%;font-family: 'Indie Flower', cursive; color: white">&nbsp;<b>Wish Here</b></span>
+			</a>
         </div>
 
+	
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
            
+        	<!-- 
            <ul class="nav navbar-nav navbar-left">
             
               <li class="">
@@ -105,32 +110,34 @@
 		</li>
          
         </ul> 
+        
+        -->
            
             <ul class="nav navbar-nav navbar-right">
             
          
                 <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; 
+                    <a href="#" style="color: white">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color: white"></span>&nbsp; 
 					Add
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp; 
+                    <a href="#" style="color: white">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: white"></span>&nbsp; 
 			Options
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp; 
+                    <a href="#" style="color: white">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="color: white"></span>&nbsp; 
                         Sahil Kalra
                     </a>
                 </li>
                 
                 <li>
-                    <a href="{% url 'home:logout_user' %}">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
+                    <a href="{% url 'home:logout_user' %}" style="color: white">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true" style="color: white"></span>&nbsp; Logout
                     </a>
                 </li>
                 

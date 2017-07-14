@@ -24,9 +24,9 @@
          <div class="col-md-4"></div>
          	<div class="col-md-4">
             	<div class="panel panel-default" style="background: transparent; border: none !important;">
-                	<div class="panel-body" >
+                	<div class="panel-body" style="text-align: center;">
                     	{% if error_message %}
-                        	<p><strong>{{ error_message }}</strong></p>
+                        	<p style="color: white"><strong>{{ error_message }}</strong></p>
                     	{% endif %}
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
@@ -34,6 +34,9 @@
                         <div class="form-group">
                             <div class="col-md-12" style="text-align: center;">
                                 <button type="submit" class="btn">Register</button>
+                                <a href="{% url 'home:login_user' %}">
+      							<input type="button" value="Login" class="btn" style="color : black"></input>
+      							</a>
                             </div>
                         </div>
                     </form>
@@ -44,13 +47,6 @@
     </div>
     </div>
 
-  
- <div class="col-md-12" style="text-align: center;">
-      <a href="{% url 'home:login_user' %}">
-      	<input type="button" value="Login" class="btn" style="color : black"></input>
-      </a>
-  
- </div>
 
  </div>
  </div>
